@@ -1,0 +1,98 @@
+[
+  {
+    "group": "efold",
+    "path": "efold/bpRNA-1m.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/bpRNA-1m/resolve/8b973adeba0218113a696dd1c22ada682f26324a/data.json",
+    "sha256": "d36c62ee92eda8b6db90ac4cd6e9d9804aedbaa8a860dd1fcd9b116d5475dff4"
+  },
+  {
+    "group": "efold",
+    "path": "efold/efold_train.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/efold_train/resolve/c80c69aef3f4e02f4089c17f6b0736d3d9dd6777/data.json",
+    "sha256": "8baa184cf1a5980ad370d8df2a66bd7c6d6dbfd51e38357827183db351ac2ecd"
+  },
+  {
+    "group": "efold",
+    "path": "efold/rnacentral_synthetic.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/rnacentral_synthetic/resolve/fbac730a326c5dd61df040cb776291852847e5e4/data.json",
+    "sha256": "4fd5e76254a29c0bbc5182103d12463dc4bffa79bfcdf55d63c280dcde21942a"
+  },
+  {
+    "group": "efold",
+    "path": "efold/ribo500-blast.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/ribo500-blast/resolve/a4606ec565b2606c6ee883c17b4ab80e03becb85/data.json",
+    "sha256": "70ac458470eb2228b36497cddb68fc49d646d4926302b29dd316d271518c5f1a"
+  },
+  {
+    "group": "efold",
+    "path": "efold/pri_miRNA.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/pri_miRNA/resolve/eaca844fe672fb2487b5b958898eb70844f23094/data.json",
+    "sha256": "e4941176ebe32805d524a52fb9f94bdd64ada107bce97ae7e4aa7d87bde70f4c"
+  },
+  {
+    "group": "efold",
+    "path": "efold/human_mRNA.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/human_mRNA/resolve/d2fcead39c6d53121c78341525c122fa9e2d90d0/data.json",
+    "sha256": "43dc82448bf3ddc624bfbb89b80dad8394110f0efad59fb399c6c673df36a0ef"
+  },
+  {
+    "group": "efold-test",
+    "path": "efold/PDB.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/PDB/resolve/73f53f4ba83678f7a9edb7179c5ac452a1c03b90/data.json",
+    "sha256": "e677b28cacf518afc052723313f0a5949b19a05ff61996241e98dcc3ac52ff26"
+  },
+  {
+    "group": "efold-test",
+    "path": "efold/archiveII.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/archiveII/resolve/9b3e4bc0f08fa8feece266ae85fd6b578127b359/data.json",
+    "sha256": "d43276a64beb2d992aa40b060df48ac6dca288c67a1c3ed32a16fc3fce96e28a"
+  },
+  {
+    "group": "efold-test",
+    "path": "efold/viral_fragments.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/viral_fragments/resolve/990cf6590d7439b6c5e50b4a7c7806f576740a5b/data.json",
+    "sha256": "a7800ddc507ca84499761f8025a1fa0c38ac0ee00bd1e3feb35b2ae7ee54df93"
+  },
+  {
+    "group": "efold-test",
+    "path": "efold/lncRNA.json",
+    "url": "https://huggingface.co/datasets/rouskinlab/lncRNA/resolve/d9527bb121948c32c80306da8549a1653dae16f5/data.json",
+    "sha256": "a7c382d894e8180964759ef27e3ac9f3e275d66ff01b398c5bbe4038a8fce202"
+  },
+  {
+    "group": "external",
+    "path": "bpRNAnew.tar.gz",
+    "url": "https://github.com/mxfold/mxfold2/releases/download/v0.1.1/bpRNAnew.tar.gz",
+    "sha256": "0d1959ac93e2b15ac47b56c7dd8155d9a0fcd3a692f75f2d0ede9221bf9d9dfb"
+  },
+  {
+    "group": "rivas",
+    "path": "Rivas.tar.gz",
+    "url": "https://github.com/mxfold/mxfold2/releases/download/v0.1.0/Rivas.tar.gz",
+    "sha256": "4ec63e183ef21cdc7dc76561da5ad1543bdd53d1ec09c14d692cc0cd8da86db2"
+  },
+  {
+    "group": "external",
+    "path": "nofam.zip",
+    "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12637522.1/media-5.zip?md5=826048a63cb261239cbd2983373f63a1",
+    "sha256": "38858ac5b9b12bf04d1e1676f3096254abcc03ab6ed3bc7cf914c98adffdb3b8"
+  },
+  {
+    "group": "rnagym",
+    "path": "rnagym/RMDB_s40_train.parquet",
+    "url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_train.parquet",
+    "sha256": "b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd"
+  },
+  {
+    "group": "rnagym",
+    "path": "rnagym/RMDB_s40_test.parquet",
+    "url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_test.parquet",
+    "sha256": "1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008"
+  },
+  {
+    "group": "rnagym",
+    "path": "rnagym/cluster_40.parquet",
+    "url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/cluster_40.parquet",
+    "sha256": "518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c"
+  }
+]

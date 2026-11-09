@@ -1,0 +1,7 @@
+protocol	epochs	learning_rate	weight_decay	accumulation
+TrainSetA pretraining	100	0.001	0.01	1
+bpRNA–RNAcentral pretraining	5	0.001	0.01	1
+Synthetic adaptation	100	0.0001	0.0001	4
+RNAgym adaptation	3	0.0001	0.0001	4
+Ribonanza then mammalian adaptation	3+3	0.0001	0.0001	4
+Joint training from random weights	100	0.0001	0.0001	4

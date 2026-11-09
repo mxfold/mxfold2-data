@@ -1,0 +1,6 @@
+replay_percent	primary	replay	optimizer_updates_per_epoch
+0	1094	0	274
+5	1094	58	288
+10	1094	122	304
+20	1094	274	342
+50	1094	1094	547

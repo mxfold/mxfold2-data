@@ -1,0 +1,8 @@
+numpy==2.3.1
+scipy==1.16.0
+pandas==2.3.0
+pyarrow==20.0.0
+pytorch-optimizer==3.6.0
+pybind11==2.13.6
+matplotlib==3.10.3
+tqdm==4.67.1

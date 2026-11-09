@@ -1,0 +1,14 @@
+{
+  "protocol/checkpoints/joint-seed0.pt": "1edcb88f21a1eb5ba71a49c1546ec0e96eebda4c780875aee8527d570a7a0c27",
+  "protocol/checkpoints/traina-epoch100.pth": "2a6be97b80a78bea4d72c1b05c14c518033a5a77600e9df24bede8b3f48ff13e",
+  "protocol/teachers/joint/truth.npz": "5fdb2fe01f64f59ea1f0554e33ffac9b637b1e2d1fe4420bc43d522542f963fb",
+  "protocol/teachers/joint/rnafold-2A3.npz": "26c8a7ad6e843602e8dfffdedad734408ce80747e97438699f209d869311bc8f",
+  "protocol/teachers/joint/mxfold2-2A3.npz": "4765d2da89b42354a5d91be5f41d72d4fca479e421cd337f9a4edf972d3932be",
+  "protocol/teachers/joint/rnafold-DMS.npz": "17a4de4a40879200d565f95648b92b95ed238d0b2e9363d2b6983c524adcb232",
+  "protocol/teachers/joint/mxfold2-DMS.npz": "591ad73db8d2b9ac7888fbdc750bb45aef9b80131233ce19e17bc7955598c309",
+  "protocol/teachers/synthetic/truth.npz": "5fdb2fe01f64f59ea1f0554e33ffac9b637b1e2d1fe4420bc43d522542f963fb",
+  "protocol/teachers/synthetic/rnafold-DMS.npz": "9c07feac011eb6d8110d692434ed85c38cb9602837779ae0f937a24e0bbcf8a4",
+  "protocol/teachers/synthetic/rnafold-2A3.npz": "ca82f6307376a82fcb055a5d16e495dff7f6ec61e566d5d19373c4aa5121105c",
+  "protocol/teachers/synthetic/mxfold2-2A3.npz": "b5f1a464809e8b1a727a1a1891b7b0cf7427d5becc4ef7e59e16541c4a911b6b",
+  "protocol/teachers/synthetic/mxfold2-DMS.npz": "606b7c2efaa367e8cfe3a7da9096bf40c763fc45c30bbf3665a4b4904f4382fb"
+}
