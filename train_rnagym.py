@@ -217,17 +217,12 @@ def run(prepared, raw, work, output, modes, gpu=0, eternafold=None):
     simulated = synthetic(prepared) if eternafold or modes & {"synthetic", "joint"} else None
     listing = prepared / "rivas/TrainSetA.lst"
     train_a = BPseqDataset(str(listing))
-    joint_list = prepared / "rivas/JointTrainSetA.lst"
-    joint_list.write_text("".join(
-        str(listing.parent / "TrainSetA" / name) + "\n"
-        for name in (ROOT / "protocol/joint-traina.txt").read_text().splitlines()
-    ))
-    joint_a = BPseqDataset(str(joint_list))
-    if (len(train_a), len(joint_a)) != (3166, 2713):
-        raise ValueError("TrainSetA protocol lists differ")
+    if len(train_a) != 3166:
+        raise ValueError("Expected all 3,166 original TrainSetA BPSEQ records")
     start = torch.load(ROOT / "protocol/checkpoints/traina-epoch100.pth", map_location="cpu", weights_only=False)
     models = {"baseline": build_model(start.get("ema_state_dict", start["model_state_dict"]), gpu).eval()}
     for block in sorted(modes):
+        checkpoint_root = work / ("joint-raw3166" if block == "joint" else block)
         scores = [dict(block=block, model="baseline", probe="", replay=0, n=430,
                        **score_testsetb(models["baseline"], prepared / "rivas/TestSetB.lst"))] if block != "joint" else []
         if block == "rnagym":
@@ -242,7 +237,7 @@ def run(prepared, raw, work, output, modes, gpu=0, eternafold=None):
             tag = f"{method}-{probe or 'all'}-replay{fraction:02d}"
             data = (PackedRNAGym(prepared / "rnagym") if block == "rnagym"
                     else PackedRNAGym(simulated / probe) if probe else None)
-            trained = fit(work / block / tag, joint_a if block == "joint" else train_a, data,
+            trained = fit(checkpoint_root / tag, train_a, data,
                           block, method, probe, fraction, gpu)
             scores.append(dict(block=block, model=tag, probe=probe, replay=fraction, n=430,
                                **score_testsetb(trained, prepared / "rivas/TestSetB.lst")))

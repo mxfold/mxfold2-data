@@ -1,6 +1,6 @@
 # MXfold2 chemical-probing study reproducibility
 
-Code, numerical source data, and run recipes for *Learning RNA secondary structure from chemical probing with MXfold2* by Rintaro Yamauchi, Sho Tsukiyama, and Kengo Sato. The recipes target the 2026-11-08 round-2 manuscript and supplement.
+Code, numerical source data, and run recipes for *Learning RNA secondary structure from chemical probing with MXfold2* by Rintaro Yamauchi, Sho Tsukiyama, and Kengo Sato. The recipes cover the 2026-11-08 round-2 manuscript and supplement and the MXfold2 joint training rerun completed on 2026-11-12.
 
 ## Run on Linux with an NVIDIA GPU
 
@@ -16,6 +16,8 @@ The command installs the pinned Python 3.13 environment, builds the MXfold2 exte
 
 Run one suite at a time with `--suite primary`, `--suite synthetic`, `--suite joint`, `--suite rnagym`, or `--suite eternafold`. The EternaFold suite also works on a CPU-only machine. `./reproduce.sh prepare --suite primary` prepares the eFold and external panels and reconstructs the three primary training files. Set `CUDA_VISIBLE_DEVICES` to select the GPU. If you manage the environment yourself, point `MXFOLD2_PYTHON` at its Python executable.
 
+The MXfold2 joint suite uses all 3,166 original TrainSetA BPSEQ records from the Rivas release. Each of the 11 joint conditions adds 1,094 TrainSetB examples per epoch and takes 1,065 optimizer updates. The TrainSetA-only control takes 792 updates per epoch. All 12 conditions run for 100 epochs from the same seed-0 neural initialization. The BPSEQ annotations enter the structural loss as constraints without preprocessing. In the archived Turner folding audit, the native decoder retained 166,178 of their 167,320 pairs. Joint checkpoints are stored under `checkpoints/joint-raw3166/` in the work directory.
+
 ## Recompute the paper results on a CPU
 
 ```bash
@@ -26,7 +28,7 @@ This mode downloads the reference panels and rescores or aggregates the archived
 
 | Round-2 result | Training suite or evidence used |
 | --- | --- |
-| Main Table 1 and Figure 2, Supplementary Tables 4–6 | `synthetic`, `joint`, and `eternafold`. The verification path averages the 430 saved TestSetB scores for each condition. |
+| Main Table 1 and Figure 2, Supplementary Tables 4–6 | `synthetic`, `joint`, and `eternafold`. The verification path averages the 430 saved TestSetB scores for each condition. The MXfold2 joint rows in Main Table 1 and Supplementary Table 6 use the 3,166-record rerun. The 2,713-record protocol in the November 8 draft is available at commit `3be8044`. |
 | Main Table 2 and Supplementary Table 7 | `rnagym` and `eternafold`. The full RNAgym benchmark retains the highest-SNR profile per sequence and probe. The two comparisons apply separate common-observation masks. The verification path includes the two archived RNAgym aggregates. |
 | Main Table 3 and Figure 3, Supplementary Table 8 | `primary`. The verification path rescores the four MXfold2 models' saved base pairs. Released predictors use saved predictions or per-RNA base-pair counts. |
 | Figure 4 and Supplementary Tables 9–11 | `primary`. Archive-NoFam averages RNAs within each group and then groups equally. bpRNAnew averages RNAs and retains all 5,401 test records. |
