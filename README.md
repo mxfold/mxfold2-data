@@ -13,6 +13,10 @@ mRNA. On a Linux machine with an NVIDIA GPU, run:
 ./reproduce-default.sh train --work-dir runs/default-model-v030
 ```
 
+The [experiment scripts and tests](experiments/README.md) include the
+individual studies, diagnostic workflows, and regression checks previously
+kept in the main MXfold2 repository.
+
 ## Run on Linux with an NVIDIA GPU
 
 On Linux x86-64, install Git, curl, [uv](https://docs.astral.sh/uv/), CMake, GNU Make, GCC/G++ with C++17 support, and Perl. Use an NVIDIA driver compatible with PyTorch CUDA 12.6. Open MPI and an MPI C++ compiler are needed when choosing more than one EternaFold rank. A GPU with ample memory and at least 32 GB of host RAM are useful for the longest RNA and full RNAgym evaluations.

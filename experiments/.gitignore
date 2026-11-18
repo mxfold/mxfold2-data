@@ -1,0 +1,7 @@
+/.cache/
+/.venv/
+/data/
+/mxfold2/
+/qsub_logs/
+/reports/
+/runs/
