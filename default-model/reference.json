@@ -1,0 +1,57 @@
+{
+  "mxfold2_source_commit": "02fd1b1f8e8a66374ad818da9812d09f3a20912e",
+  "original_trainer_sha256": "21792b7fc32c317107a38ecee7e43f024f5303abbbacffd5d6ead14425a48f65",
+  "original_native_extension_sha256": "b8a83a2dac49cc041e568b286f73c0111b125900024b1dca43b5c4d941bc50e0",
+  "environment": {
+    "python": "3.13.8",
+    "torch": "2.7.1+cu126",
+    "cuda": "12.6",
+    "gpu": "NVIDIA H100 MIG 3g.47gb",
+    "numpy": "2.3.1",
+    "pytorch_optimizer": "3.6.0",
+    "pybind11": "2.13.6"
+  },
+  "phases": {
+    "pretrain": {
+      "primary_per_epoch": 67681,
+      "replay_per_epoch": 0,
+      "optimizer_updates": 676810,
+      "final_checkpoint_sha256": "80f7b3838ac208f07788c0994b9573a3a71bb92a2b63a58bbe4034ca7eea3f8c",
+      "mean_losses_by_epoch": [
+        0.10289044908555332,
+        0.10016080776644219,
+        0.09924434696320689,
+        0.09948556696271964,
+        0.09871805546395551,
+        0.0993811914326219,
+        0.09858826562312084,
+        0.09912650589706667,
+        0.0985467726233318,
+        0.09900842959531816
+      ]
+    },
+    "ribonanza": {
+      "primary_per_epoch": 45729,
+      "replay_per_epoch": 11432,
+      "optimizer_updates": 42873,
+      "final_checkpoint_sha256": "cff2123c8423565846e7dc356a0b3ac9d93a41ba960e75d3b3063ca14af1d49b",
+      "mean_losses_by_epoch": [
+        0.09623481547225848,
+        0.09490702013961842,
+        0.09373050106139452
+      ]
+    },
+    "mammalian": {
+      "primary_per_epoch": 2471,
+      "replay_per_epoch": 618,
+      "optimizer_updates": 2319,
+      "final_checkpoint_sha256": "8feb5d0cbb2b4fb1cbcd00415bf29db4f26b66207303f954f5974b09a922da40",
+      "mean_losses_by_epoch": [
+        0.1095637742131641,
+        0.1098887690426025,
+        0.1090702208474992
+      ]
+    }
+  },
+  "bundled_weights_sha256": "3737a26d913a54e0843472ac4c1e9bbad19f04205812f732642d753d5a3c76e7"
+}

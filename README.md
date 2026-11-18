@@ -2,6 +2,17 @@
 
 Code, numerical source data, and run recipes for *Learning RNA secondary structure from chemical probing with MXfold2* by Rintaro Yamauchi, Sho Tsukiyama, and Kengo Sato. The recipes cover the 2026-11-08 round-2 manuscript and supplement and the MXfold2 joint training rerun completed on 2026-11-12.
 
+## Reproduce the MXfold2 0.3.0 default model
+
+The [default model recipe](default-model/README.md) includes the exact prepared
+training datasets and settings for ten epochs of structure pretraining,
+followed by IMLE-Rank fine-tuning on Ribonanza and then on pri-miRNA and human
+mRNA. On a Linux machine with an NVIDIA GPU, run:
+
+```bash
+./reproduce-default.sh train --work-dir runs/default-model-v030
+```
+
 ## Run on Linux with an NVIDIA GPU
 
 On Linux x86-64, install Git, curl, [uv](https://docs.astral.sh/uv/), CMake, GNU Make, GCC/G++ with C++17 support, and Perl. Use an NVIDIA driver compatible with PyTorch CUDA 12.6. Open MPI and an MPI C++ compiler are needed when choosing more than one EternaFold rank. A GPU with ample memory and at least 32 GB of host RAM are useful for the longest RNA and full RNAgym evaluations.

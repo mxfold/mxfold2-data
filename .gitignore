@@ -1,5 +1,6 @@
 /runs/
 /.venv/
+/.venv-default/
 /.build/
 __pycache__/
 *.so

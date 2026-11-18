@@ -1,0 +1,176 @@
+{
+  "structures": {
+    "sequences": 67681,
+    "sources": {
+      "PDB": {
+        "input": 355,
+        "ambiguous_bases": 0,
+        "exact_unique": 355,
+        "retained": 258,
+        "alternative_train_labels": 62,
+        "membership_retained": 258,
+        "membership_cluster_member": 97
+      },
+      "Archive-NoFam": {
+        "input": 89,
+        "ambiguous_bases": 0,
+        "exact_unique": 85,
+        "retained": 70,
+        "alternative_train_labels": 5,
+        "membership_retained": 70,
+        "membership_cluster_member": 15,
+        "membership_exact_match": 2,
+        "membership_alternative_label": 2
+      },
+      "ArchiveII": {
+        "input": 3370,
+        "ambiguous_bases": 0,
+        "exact_unique": 2459,
+        "excluded_over_max_length": 11,
+        "retained": 645,
+        "alternative_train_labels": 197,
+        "membership_cluster_member": 2186,
+        "membership_alternative_label": 189,
+        "membership_exact_match": 339,
+        "membership_retained": 645
+      },
+      "bpRNAnew": {
+        "input": 5401,
+        "ambiguous_bases": 40,
+        "exact_unique": 5401,
+        "retained": 5307,
+        "alternative_train_labels": 0,
+        "membership_retained": 5307,
+        "membership_cluster_member": 94
+      },
+      "bpRNA-1m": {
+        "input": 66715,
+        "ambiguous_bases": 0,
+        "exact_unique": 50982,
+        "excluded_over_max_length": 9627,
+        "retained": 12630,
+        "alternative_train_labels": 39,
+        "membership_cluster_member": 42126,
+        "membership_exact_match": 1617,
+        "membership_retained": 12630,
+        "membership_alternative_label": 715
+      },
+      "RNAcentral": {
+        "input": 226729,
+        "ambiguous_bases": 0,
+        "exact_unique": 225376,
+        "exact_curated_overlap": 1353,
+        "retained": 46118,
+        "alternative_train_labels": 0,
+        "membership_cluster_member": 180290,
+        "membership_retained": 46118,
+        "membership_exact_match": 321
+      },
+      "TrainSetA": {
+        "input": 3166,
+        "ambiguous_bases": 12,
+        "exact_unique": 3040,
+        "retained": 1683,
+        "alternative_train_labels": 362,
+        "membership_retained": 1683,
+        "membership_cluster_member": 1400,
+        "membership_exact_match": 61,
+        "membership_alternative_label": 22
+      },
+      "TrainSetB": {
+        "input": 1094,
+        "ambiguous_bases": 81,
+        "exact_unique": 1011,
+        "retained": 222,
+        "alternative_train_labels": 76,
+        "membership_retained": 222,
+        "membership_cluster_member": 852,
+        "membership_exact_match": 18,
+        "membership_alternative_label": 2
+      },
+      "TestSetA": {
+        "input": 592,
+        "ambiguous_bases": 75,
+        "exact_unique": 569,
+        "retained": 400,
+        "alternative_train_labels": 99,
+        "membership_retained": 400,
+        "membership_cluster_member": 174,
+        "membership_exact_match": 16,
+        "membership_alternative_label": 2
+      },
+      "TestSetB": {
+        "input": 430,
+        "ambiguous_bases": 2,
+        "exact_unique": 429,
+        "retained": 348,
+        "alternative_train_labels": 92,
+        "membership_retained": 348,
+        "membership_cluster_member": 81,
+        "membership_exact_match": 1
+      }
+    },
+    "longest": 1000,
+    "max_length": 1000,
+    "rna_central_removed_near_curated": 96465,
+    "clustering": [
+      "-c",
+      ".8",
+      "-n",
+      "4",
+      "-G",
+      "1",
+      "-g",
+      "1",
+      "-s",
+      ".8",
+      "-aS",
+      ".8",
+      "-aL",
+      ".8",
+      "-r",
+      "0",
+      "-l",
+      "3",
+      "-d",
+      "0",
+      "-p",
+      "1",
+      "-T",
+      "8",
+      "-M",
+      "64000"
+    ],
+    "combined_check": "passed",
+    "RNAcentral_labels": "RNAstructure Fold pseudo-labels",
+    "RNAcentral_priority": "Exclude matches to all eligible non-RNAcentral inputs, including members of curated clusters.",
+    "alternative_labels": "Distinct curated exact-sequence conformers rotate by epoch."
+  },
+  "ribonanza": {
+    "sequences": 45729,
+    "sources": {
+      "ribo500-blast": 45729
+    },
+    "observations": 82836
+  },
+  "mammalian": {
+    "sequences": 2471,
+    "sources": {
+      "pri_miRNA": 1096,
+      "human_mRNA": 1375
+    },
+    "observations": 2471
+  },
+  "exact_sequence_overlap": {
+    "ribonanza_structure": 0,
+    "mammalian_structure": 0,
+    "mammalian_ribonanza": 0
+  },
+  "sha256": {
+    "data/structure.jsonl": "fc744049d716b8d74f17f6a1d2054179fe6a26bf9c085e62ba149cab5abec125",
+    "data/structure-summary.json": "1a448c75a5471e0a30107e5d90e137499856044574b89044e5a1925ba75cc65f",
+    "data/structure-membership.tsv": "a3d7ba2b8abea7453729086443919557cf3ce7e5909f1cc3605cc776baa8859e",
+    "data/ribonanza.jsonl": "c76a675905843b6a4d98a65a57297f1d66d49441ac319c7b6ec1838e1fb9214c",
+    "data/mammalian.jsonl": "e21c8304d7d14a050667ac4ecc776c77eee95797c576a59322a947065034245f"
+  }
+}

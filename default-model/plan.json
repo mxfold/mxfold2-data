@@ -1,0 +1,37 @@
+{
+  "version": "0.3.0",
+  "source_commit": "02fd1b1f8e8a66374ad818da9812d09f3a20912e",
+  "pretrain_epochs": 10,
+  "pretrain_milestones": [
+    5,
+    10
+  ],
+  "ribonanza_epochs": 3,
+  "mammalian_epochs": 3,
+  "max_length": 1000,
+  "structure_replay_fraction": 0.2,
+  "arm_settings": {
+    "pretrain": {
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "accumulation": 1,
+      "chemical_weight": 1.0,
+      "restore_optimizer": false,
+      "freeze_turner": false,
+      "seed": 1234,
+      "replay_mode": "replacement",
+      "normalization": "none"
+    },
+    "mw_rank_restored": {
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "accumulation": 4,
+      "chemical_weight": 0.5,
+      "restore_optimizer": true,
+      "freeze_turner": true,
+      "seed": 0,
+      "replay_mode": "cycle",
+      "normalization": "rms"
+    }
+  }
+}
